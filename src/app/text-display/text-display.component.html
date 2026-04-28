@@ -1,0 +1,26 @@
+<!-- TextDisplayComponent — Left Panel matching assignment image -->
+<div class="text-display-wrapper">
+
+  <!-- INPUT BOX -->
+  <div class="text-box-container">
+    <textarea
+      class="text-area"
+      [(ngModel)]="inputText"
+      (input)="onTextInput()"
+      placeholder="Type Text :-">
+    </textarea>
+  </div>
+
+  <!-- OUTPUT BOX -->
+  <div class="text-box-container">
+    <textarea
+      class="text-area output-area"
+      [value]="outputText"
+      [ngStyle]="outputStyles"
+      placeholder="Output Text :-"
+      readonly>
+    </textarea>
+  </div>
+
+</div>
+

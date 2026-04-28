@@ -1,0 +1,61 @@
+/* HomeComponent Styles — matches assignment image exactly */
+
+* { box-sizing: border-box; }
+
+.home-wrapper {
+  min-height: 100vh;
+  background: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER — "Text Formatted" bold black on light grey ===== */
+.app-header {
+  background: #e0e0e0;
+  padding: 18px 30px 14px;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111111;
+  letter-spacing: -0.5px;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== MAIN CONTENT: side by side panels ===== */
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px 24px;
+  align-items: flex-start;
+}
+
+/* ===== LEFT PANEL — grey container ===== */
+.left-panel {
+  flex: 1;
+  background: #cccccc;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 500px;
+}
+
+/* ===== RIGHT PANEL — grey container ===== */
+.right-panel {
+  flex: 1;
+  background: #cccccc;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 500px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .main-content {
+    flex-direction: column;
+    padding: 12px;
+  }
+}

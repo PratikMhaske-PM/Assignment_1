@@ -1,0 +1,75 @@
+<!-- FormattersComponent — Right Panel matching assignment image exactly -->
+<div class="formatters-wrapper">
+
+  <!-- ===== STATS BOX — dark grey, Word Count & Char Count ===== -->
+  <div class="stats-box">
+    <div class="stat-row">
+      <span class="stat-text">Word Count :&nbsp;</span>
+      <span class="stat-value">{{ stats.wordCount }} Words</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-text">Char Count :&nbsp;</span>
+      <span class="stat-value">{{ stats.charCount }} Chars</span>
+    </div>
+  </div>
+
+  <!-- ===== ACTION BUTTONS — 2 column × 3 row grid ===== -->
+  <div class="buttons-panel">
+    <div class="btn-grid">
+
+      <button class="action-btn" (click)="clearAll()">Clear All</button>
+      <button class="action-btn" (click)="removeWhitespace()">White-space Remove</button>
+
+      <button class="action-btn" (click)="reverseAll()">Reverse All</button>
+      <button class="action-btn" (click)="removeSpecialChars()">Remove Special Char</button>
+
+      <button class="action-btn" (click)="removeStyling()">Remove styling</button>
+      <button class="action-btn" (click)="capitalizeWords()">Capitalize Word</button>
+
+    </div>
+
+    <!-- ===== STYLE ROW — B  I  U  colorpicker  +  − ===== -->
+    <div class="style-row">
+
+      <button class="style-btn bold-btn"
+              [class.active]="bold"
+              (click)="toggleBold()">
+        <strong>B</strong>
+      </button>
+
+      <button class="style-btn italic-btn"
+              [class.active]="italic"
+              (click)="toggleItalic()">
+        <em>I</em>
+      </button>
+
+      <button class="style-btn underline-btn"
+              [class.active]="underline"
+              (click)="toggleUnderline()">
+        <span style="text-decoration:underline;">U</span>
+      </button>
+
+      <!-- Color picker — circular swatch like image -->
+      <label class="color-picker-label" matTooltip="Pick text color">
+        <input type="color"
+               class="color-input-hidden"
+               [value]="color"
+               (input)="onColorChange($event)" />
+        <span class="color-circle" [style.background]="color"></span>
+      </label>
+
+      <!-- Font size + -->
+      <button class="size-btn plus-btn"
+              (click)="increaseFontSize()"
+              [disabled]="fontSize >= 72">+</button>
+
+      <!-- Font size - -->
+      <button class="size-btn minus-btn"
+              (click)="decreaseFontSize()"
+              [disabled]="fontSize <= 8">−</button>
+
+    </div>
+  </div>
+
+</div>
+

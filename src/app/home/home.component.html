@@ -1,0 +1,26 @@
+<!-- HomeComponent — matches assignment image layout exactly -->
+<div class="home-wrapper">
+
+  <!-- HEADER: "Text Formatted" bold title -->
+  <div class="app-header">
+    <span class="header-title">Text Formatter</span>
+  </div>
+
+  <!-- MAIN: Left (text areas) | Right (stats + buttons) -->
+  <div class="main-content">
+
+    <!-- LEFT PANEL — TextDisplay child component -->
+    <div class="left-panel">
+      <app-text-display></app-text-display>
+    </div>
+
+    <!-- RIGHT PANEL — Formatters child component -->
+    <div class="right-panel">
+      <app-formatters
+        (formattingChanged)="onFormattingChanged($event)">
+      </app-formatters>
+    </div>
+
+  </div>
+</div>
+
